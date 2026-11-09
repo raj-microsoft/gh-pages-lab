@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twelve guides, twelve sites · gh-pages-lab</title>
+<meta name="description" content="Twelve websites, each built by following one guide from the AI Web Design Library.">
+<style>
+@font-face{font-family:"Bricolage Grotesque";font-weight:400 800;font-display:swap;src:url(bricolage-latin.woff2) format("woff2")}
+@font-face{font-family:"Nunito Sans";font-weight:400 800;font-display:swap;src:url(nunito-sans-latin.woff2) format("woff2")}
+:root{
+  --ink:#15171A; --paper:#E6E8EA; --sheet:#F4F5F6; --muted:#50555C; --line:#C9CDD2;
+  --red:#A8341A; --red-t:#8A2A14;
+  --display:"Bricolage Grotesque","Nunito Sans",system-ui,sans-serif; --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Nunito Sans","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:#A8341A33}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(46px,7vw,104px);line-height:.95;letter-spacing:-.035em;margin:0;text-wrap:balance}
+h1 span{color:var(--red)}
+.lede{font-size:18px;color:var(--muted);max-width:44ch;margin:0}
+.lede a{color:var(--ink);text-underline-offset:3px}
+.tally{display:flex;gap:36px;margin-top:36px;flex-wrap:wrap}
+.tally b{display:block;font-family:var(--display);font-size:34px;line-height:1;font-weight:700}
+.tally span{font-size:13.5px;color:var(--muted)}
+
+/* contact sheet: one frame per site, numbered by guide */
+.sheet{list-style:none;margin:0;padding:48px 0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px}
+.frame{display:grid;gap:12px}
+.shot{position:relative;display:block;aspect-ratio:16/10;background:var(--sheet);border:1px solid var(--line);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s var(--ease)}
+.shot:hover img{transform:scale(1.03)}
+.shot .no{position:absolute;left:0;top:0;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:700;font-size:14px;padding:4px 10px}
+.frame h2{font-family:var(--display);font-size:22px;font-weight:700;letter-spacing:-.01em;margin:4px 0 0;line-height:1.2}
+.frame h2 a{text-decoration:none}
+.frame h2 a:hover{color:var(--red-t)}
+.frame p{margin:0;color:var(--muted);font-size:15px}
+.guide{font-size:14px;margin:2px 0 0}
+.guide a{color:var(--ink);text-underline-offset:3px}
+.swap{font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+.swap b{color:var(--ink);font-weight:700}
+.links{display:flex;gap:16px;font-size:14px;font-weight:700}
+.links a{text-underline-offset:3px}
+
+section.notes{border-top:1px solid var(--line);padding:56px 0 72px;display:grid;grid-template-columns:.8fr 1.2fr;gap:48px}
+section.notes h2{font-family:var(--display);font-size:clamp(28px,3vw,38px);margin:0;letter-spacing:-.02em;line-height:1.1}
+section.notes ul{margin:0;padding-left:20px}
+section.notes li{margin:0 0 10px;max-width:68ch}
+footer{border-top:1px solid var(--line);padding:24px 0 48px;color:var(--muted);font-size:14px}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+@media(max-width:980px){.sheet{grid-template-columns:1fr 1fr}.head,section.notes{grid-template-columns:1fr;gap:24px}}
+@media(max-width:620px){.wrap{padding:0 20px}.sheet{grid-template-columns:1fr;gap:40px}header{padding-top:48px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="head">
+      <h1>Twelve guides. <span>Twelve sites.</span></h1>
+      <p class="lede">Each site below follows one guide from the <a href="https://raj-microsoft.github.io/ai-web-design-library/">AI Web Design Library</a>, step by step from its original source. Where a guide needs a paid or sign-in tool, a free one stands in, and the site says so.</p>
+    </div>
+    <div class="tally">
+      <div><b class="num">12</b><span>sites live</span></div>
+      <div><b class="num">12</b><span>guides followed</span></div>
+      <div><b class="num">0</b><span>paid services used</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <ol class="sheet" id="sheet"></ol>
+
+  <section class="notes">
+    <h2>How these were made</h2>
+    <ul>
+      <li>Every builder read the guide's <b>original</b> source (Google Doc, Notion page, prompt page or PDF), not just the library summary. Several summaries were shorter than the originals, so the full versions were used.</li>
+      <li>All brands, products, prices and people are fictional unless a source is cited on the site. Facts (NASA planet data, the 1953 North Sea flood, Jules Verne quotations) link to their sources.</li>
+      <li>Photos and third-party components carry their licences and authors on the site that uses them.</li>
+      <li>Every site was checked on desktop and phone sizes, for reduced motion, and with the Impeccable design detector.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Built November 2026. Each project has its own public repository under <a href="https://github.com/raj-microsoft">github.com/raj-microsoft</a>.</div>
+</footer>
+
+<script>
+const P=[
+ ['01','tide-almanac','Tide Almanac','An interactive North Sea tide clock, moon phases and the story of the 1953 flood.','The 5 Sites That Make AI-Built Websites Look Expensive','https://docs.google.com/document/d/1xJX5V0UXEMwu66qwL_fqStcUP1p40SHbK1NN3at2djc/edit','Manus (paid agent) skipped; built with the four free libraries'],
+ ['02','night-bakery','Nachtbakkerij','A night bakery in a canal city, with an oven timeline and a Bread Club.','Build a $10K Website in Claude Code','https://noocap.notion.site/Build-a-10K-Website-in-Claude-Code-Free-Setup-Guide-356508e99dda816c9d15ea892d4139f9','Vite instead of Next.js; 21st.dev components taken from the author\u2019s public repo'],
+ ['03','toolshed','The Toolshed','The 15 free Google AI tools on a pegboard. Describe a job and the right tools swing forward.','15 Free Google AI Tools','https://forested-beet-e72.notion.site/List-of-Free-Google-AI-Tools-3a8a26434b34802e9ea6c4a2c714ef71','Nothing to swap; tool status rechecked against official pages'],
+ ['04','sketchbook-nl','A Sketchbook of the Netherlands','Eight Dutch places, each a taped-in photo opposite a hand-drawn SVG.','Turn Trip Photos Into a Digital Sketchbook','https://nelsonxlee.substack.com/p/turn-your-trip-photos-into-a-digital','Openly licensed Wikimedia photos instead of a personal camera roll'],
+ ['05','orbit-atlas','Orbit Atlas','The eight planets as moving posters, built on HyperFrames with NASA facts.','Claude Design + HyperFrames Pipeline','https://hyperframes.heygen.com/introduction','Hand-made SVG compositions instead of Claude Design (sign-in)'],
+ ['06','lantern-film','Lantern','A 30-second launch film for a fictional family AI, with its score and making-of.','Making the dots Film with Opus 5.5','https://achieved-cloak-445.notion.site/Making-the-dots-film-with-Opus-5-5-3f0e13e8b390813f9ac7ce05c2ec7df1','Code-drawn characters and captions instead of Higgsfield footage and ElevenLabs voice'],
+ ['07','exploded-chronograph','Meridian Noir','A chronograph that comes apart into its parts as you scroll, then reassembles.','AI Chip Scroll-Animation Landing Page','https://noocap.notion.site/Complete-Workflow-AI-Chip-Scroll-Animation-Landing-Page-341508e99dda80618d88e989402ac749','Three.js renders instead of Google Whisk and Flow'],
+ ['08','bloom-scroll','Bloom','A tulip bulb grows into full flower as you scroll.','Codex + Kling = $15K Animated Website','https://youtu.be/eUkCSssoYHw','Procedurally drawn frames instead of Kling video (paid API)'],
+ ['09','seven-motions','Seven Motions','One seed\u2019s journey told in seven animation styles, each with its own film and score.','Claude Opus 5.5 Motion Videos Tutorial \u00b7 Janus Tiu','https://dm.stan.store/iAqWZI','Coded in-house instead of with Claude Code'],
+ ['11','obsidian-templates','OBSIDIAN/LIME','A dark templates studio built from the full 13-section prompt.','The Complete AI Website Prompt \u00b7 Hyliox','https://hyliox.io/prompt','Generated canvas background instead of an HLS video'],
+ ['15','prompt-to-page','Soft Orchard','Glossy 3D jelly fruit you can pull, recolour, slice and skewer.','Budarina Curated Prompt Collection \u00b7 \u201cJelly Study\u201d','https://budarina.design/prompts','CPU spring physics instead of a GPU volumetric solver'],
+ ['16','twenty-thousand-leagues','Twenty Thousand Leagues','A descent with the Nautilus through four chapters of Jules Verne\u2019s novel.','Divya\u2019s Themed AI Website Repos','https://github.com/divyashrma18?tab=repositories','Techniques studied and rebuilt; no code or franchise imagery copied']
+];
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+document.getElementById('sheet').innerHTML=P.map(([n,slug,name,line,guide,src,swap])=>`
+<li class="frame">
+  <a class="shot" href="https://raj-microsoft.github.io/${slug}/" aria-label="Open ${esc(name)}"><img src="shots/${slug}.webp" alt="" width="960" height="600" loading="lazy" decoding="async"><span class="no">Guide ${n}</span></a>
+  <h2><a href="https://raj-microsoft.github.io/${slug}/">${esc(name)}</a></h2>
+  <p>${esc(line)}</p>
+  <p class="guide">Follows <a href="${src}">${esc(guide)}</a></p>
+  <p class="swap"><b>Swapped:</b> ${esc(swap)}</p>
+  <div class="links"><a href="https://raj-microsoft.github.io/${slug}/">Open site</a><a href="https://github.com/raj-microsoft/${slug}">Source</a></div>
+</li>`).join('');
+</script>
+</body>
+</html>
